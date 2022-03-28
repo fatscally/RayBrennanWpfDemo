@@ -1,0 +1,14 @@
+﻿<Application x:Class="NoFrixionWpf.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             xmlns:local="clr-namespace:NoFrixionWpf.Windows"
+             >
+
+    <Application.MainWindow>
+        <local:MainWindow Visibility="Visible" />
+    </Application.MainWindow>
+
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>
