@@ -67,9 +67,6 @@
 
         <Button Content="{Binding RefreshButtonText}" Command="{Binding RefreshCommand}" Grid.Row="5" Grid.Column="2" Margin="5" />
 
-        <!-- non async call -->
-        <Button Content="Say Hello" Command="{Binding UpdateTextCommand}" Grid.Row="5" Grid.Column="1" Margin="5" />
-
 
     </Grid>
 

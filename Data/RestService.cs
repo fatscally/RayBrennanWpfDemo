@@ -11,13 +11,13 @@ namespace NoFrixionWpf.Data
 
     internal class RestService 
     {
-        HttpClient client;
+
         JsonSerializerOptions serializerOptions;
-        private Price? Price;
+
 
         public RestService()
         {
-            client = new HttpClient();
+
             serializerOptions = new JsonSerializerOptions
             {
                 PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
@@ -30,19 +30,30 @@ namespace NoFrixionWpf.Data
 
         internal async Task<Price> GetLatestPriceAsync()
         {
+
+            Price price = new();
+
             Uri uri = new Uri(string.Format(Constants.RestUrl, string.Empty));
 
             try
             {
-   
-                HttpResponseMessage response = await client.GetAsync(uri);
+                using HttpClient client = new();
+
+                
+                HttpResponseMessage response = new();
+                
+                //the button is disabled here...
+                response = await client.GetAsync(uri).ConfigureAwait(false);
+
 
                 if (response.IsSuccessStatusCode)
                 {
                     string content = await response.Content.ReadAsStringAsync();
 
-                    Price = JsonSerializer.Deserialize<Price>(content, serializerOptions);
+                    price = JsonSerializer.Deserialize<Price>(content, serializerOptions);
+
                 }
+
 
 
             }
@@ -51,7 +62,7 @@ namespace NoFrixionWpf.Data
                 Debug.WriteLine(@"\tERROR {0}", ex.Message);
             }
 
-            return Price;
+            return price;
         }
 
 

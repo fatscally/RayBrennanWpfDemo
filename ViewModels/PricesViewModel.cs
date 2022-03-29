@@ -10,33 +10,20 @@ namespace NoFrixionWpf.ViewModels
     internal partial class PricesViewModel
     {
 
-        static int count;
 
-        /// <summary>
-        /// Async call does not re-enable the button.
-        /// </summary>
-        /// <returns></returns>
+
         [ICommand]
         async Task Refresh()
         {
 
-            RefreshButtonText = "Starting";
+            RefreshButtonText = "Calling...";
 
-            Price = await new RestService().GetLatestPriceAsync();
+            Price = await new RestService().GetLatestPriceAsync().ConfigureAwait(false);
 
-            RefreshButtonText = "Finished ";
+            RefreshButtonText = "Refresh";
 
         }
 
-
-        /// <summary>
-        /// Non async button call works as expected.
-        /// </summary>
-        [ICommand]
-        void UpdateText()
-        {
-            RefreshButtonText = "Hello World " + count++.ToString();
-        }
 
         [ObservableProperty]
         string refreshButtonText = "Refresh Price";
