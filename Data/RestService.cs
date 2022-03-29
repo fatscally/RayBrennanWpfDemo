@@ -54,6 +54,9 @@ namespace NoFrixionWpf.Data
             return Price;
         }
 
+
+
+
     }
 }
 
