@@ -1,8 +1,8 @@
-﻿using NoFrixionWpf.Models;
+﻿using RayBrennan.Models;
 using System.Threading.Tasks;
 
 
-namespace NoFrixionWpf.Data
+namespace RayBrennan.Data
 {
 
     internal interface IRestService

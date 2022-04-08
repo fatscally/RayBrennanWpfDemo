@@ -1,7 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using Newtonsoft.Json;
 
-namespace NoFrixionWpf.Models
+namespace RayBrennan.Models
 {
     [INotifyPropertyChanged]
     internal partial class Bpi

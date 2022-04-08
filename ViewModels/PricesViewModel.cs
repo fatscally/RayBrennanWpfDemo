@@ -1,10 +1,10 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using NoFrixionWpf.Data;
+using RayBrennan.Data;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace NoFrixionWpf.ViewModels
+namespace RayBrennan.ViewModels
 {
     [INotifyPropertyChanged]
     internal partial class PricesViewModel

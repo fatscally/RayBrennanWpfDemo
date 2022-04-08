@@ -1,4 +1,5 @@
-﻿using NoFrixionWpf.Models;
+﻿using RayBrennan.Models;
+using RayBrennanWpf;
 using System;
 using System.Diagnostics;
 using System.Net.Http;
@@ -6,7 +7,7 @@ using System.Text.Json;
 using System.Threading.Tasks;
 
 
-namespace NoFrixionWpf.Data;
+namespace RayBrennan.Data;
 
 
 internal class RestService

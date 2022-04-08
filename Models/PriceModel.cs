@@ -1,6 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 
-namespace NoFrixionWpf.Models
+namespace RayBrennan.Models
 {
     [INotifyPropertyChanged]
     internal partial class PriceModel

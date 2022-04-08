@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 
-namespace NoFrixionWpf.Models
+namespace RayBrennan.Models
 {
     internal class Price : PriceModel
     {

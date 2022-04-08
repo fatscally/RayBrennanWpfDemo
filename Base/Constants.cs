@@ -1,4 +1,4 @@
-﻿namespace NoFrixionWpf
+﻿namespace RayBrennanWpf
 {
 
     public static class Constants
